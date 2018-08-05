@@ -44,6 +44,7 @@ SRCS		+= src/total_name.c
 SRCS		+= src/isacmd.c
 SRCS		+= src/socket.c
 SRCS		+= src/read_wrapper.c
+SRCS		+= src/load_file.c
 
 TESTS_SRCS	:= $(SRCS)
 
