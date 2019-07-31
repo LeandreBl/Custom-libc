@@ -37,8 +37,7 @@ int create_server(uint16_t port, int backlog, struct sockaddr_in *buffer)
 	server.sin_addr.s_addr = INADDR_ANY;
 	server.sin_family = AF_INET;
 	server.sin_port = htons(port);
-	if (bind_and_get(fd, (struct sockaddr *)&server) == -1 ||
-		listen(fd, backlog) == -1)
+	if (bind_and_get(fd, (struct sockaddr *)&server) == -1 || listen(fd, backlog) == -1)
 		return (-1);
 	if (buffer != NULL)
 		*buffer = server;

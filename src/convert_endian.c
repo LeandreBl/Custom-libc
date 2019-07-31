@@ -24,7 +24,6 @@ char *convert_endian_str(int x)
 
 int convert_endian(int x)
 {
-	x = (x >> 24) | ((x << 8) & 0x00ff0000) | ((x >> 8) & 0x0000ff00)
-	    | (x << 24);
+	x = (x >> 24) | ((x << 8) & 0x00ff0000) | ((x >> 8) & 0x0000ff00) | (x << 24);
 	return (x);
 }

@@ -19,8 +19,7 @@ static bool try_each(char **paths, char *cmd)
 
 	for (size_t i = 0; paths[i]; ++i) {
 		p = paths[i];
-		if (asprintf(&paths[i], "%s/%s", paths[i], cmd)
-			&& access(paths[i], F_OK) == 0) {
+		if (asprintf(&paths[i], "%s/%s", paths[i], cmd) && access(paths[i], F_OK) == 0) {
 			free(p);
 			sfree_tab(&paths);
 			return (false);

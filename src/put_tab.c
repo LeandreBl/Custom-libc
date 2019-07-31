@@ -15,7 +15,7 @@ void put_tab(char **tab)
 	if (tab == NULL)
 		printf("{ NULL }\n");
 	else
-		for (size_t i = 0 ; tab[i]; ++i)
+		for (size_t i = 0; tab[i]; ++i)
 			printf("%s\n", tab[i]);
 }
 

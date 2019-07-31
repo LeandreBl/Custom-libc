@@ -30,8 +30,7 @@ char *get_ip(const char *interface)
 	if (!ip || getifaddrs(&ifaddr) == -1)
 		return (NULL);
 	for (cursor = ifaddr; cursor; cursor = cursor->ifa_next) {
-		if (cursor->ifa_addr
-		    && cursor->ifa_addr->sa_family == AF_INET) {
+		if (cursor->ifa_addr && cursor->ifa_addr->sa_family == AF_INET) {
 			saddr = (struct sockaddr_in *)cursor->ifa_addr;
 			strcpy(ip, inet_ntoa(saddr->sin_addr));
 			if (!interface && is_working_ip(ip))

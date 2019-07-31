@@ -9,11 +9,11 @@
 */
 
 #ifndef MYDEFINES_H_
-# define MYDEFINES_H_
+#define MYDEFINES_H_
 
-# define ABS(x) ((x < 0) ? -x : x)
+#define ABS(x) ((x < 0) ? -x : x)
 
-# define sstrlen(str) ((str == NULL) ? 0 : strlen(str))
-# define sstrdup(str) ((str == NULL) ? 0 : strdup(str))
+#define sstrlen(str) ((str == NULL) ? 0 : strlen(str))
+#define sstrdup(str) ((str == NULL) ? 0 : strdup(str))
 
 #endif /* !MYDEFINES_H_ */

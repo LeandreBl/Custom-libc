@@ -6,20 +6,20 @@
 */
 
 #ifndef LBL_LIBC_H_
-# define LBL_LIBC_H_
+#define LBL_LIBC_H_
 
-# ifdef __cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 /* only here to remove the automatic fcking emacs indentation, Best regards */
-# ifdef __horriblethingwithemacs
+#ifdef __horriblethingwithemacs
 }
 #endif
 
-# include <stddef.h>
-# include <stdbool.h>
-# include <stdint.h>
-# include <arpa/inet.h>
+#include <stddef.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <arpa/inet.h>
 
 /* wrapper on read */
 ssize_t wread(int fd, void *dest, size_t count);

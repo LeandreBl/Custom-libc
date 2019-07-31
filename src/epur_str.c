@@ -26,8 +26,7 @@ int epur_str(char *str)
 		++i;
 	}
 	if (sstrlen(str) > 0)
-		while (str[sstrlen(str) - 1] == ' '
-		       || str[sstrlen(str) - 1] == '\t')
+		while (str[sstrlen(str) - 1] == ' ' || str[sstrlen(str) - 1] == '\t')
 			shift_right(str, 1);
 	return (0);
 }
