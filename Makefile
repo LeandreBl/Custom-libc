@@ -9,6 +9,8 @@ NAME		= liblbl-libc.so
 
 CC		= gcc
 
+ARCHIVER = ar
+
 SRCS		= src/char_binary.c
 SRCS		+= src/clipboard.c
 SRCS		+= src/convert_endian.c
@@ -98,5 +100,8 @@ install: re
 	printf "\033[1m\033[31mError : try sudo make install\033[0m\n" && \
 	cp include/lbl*.h /usr/include/ 2> /dev/null && \
 	printf "\033[1m\033[32mLibrary successfull installed !\033[0m\n"
+
+static: re
+	$(ARCHIVER) rc $(NAME:.so=.a) $(OBJS)
 
 .PHONY: all clean fclean re tests_run debug install
